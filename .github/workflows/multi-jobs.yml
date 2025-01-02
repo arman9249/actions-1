@@ -3,7 +3,7 @@ name: Generate ASCII Artwork Multi Jobs
 on:
     # push
     schedule:
-      - cron: "25 3 * * *"
+      - cron: '30 3 * * *'
 
 jobs:
     build_job_1:
