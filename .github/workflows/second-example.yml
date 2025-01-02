@@ -1,0 +1,26 @@
+name: My Second workflow
+on: [push]
+
+jobs:
+    second_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+              
+            - name: Welcome message
+              run: |
+                echo "My first GHA Job"
+                ls -ltra
+                cat README.md
+            
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+            
+            # - name: List files
+            #   run: ls
+            
+            # - name: Read file
+            #   run: cat README.md
+
+
